@@ -63,6 +63,22 @@ function Camera.draw(player, map)
             )
         end
 
+        -- Parede direita
+        if rightTile == 1 then
+            local size = 300 / distance
+            love.graphics.polygon(
+                "line",
+                centerX + size / 2,
+                centerY - size / 2,
+                centerX + size,
+                centerY - size * 1.5,
+                centerX + size,
+                centerY + size * 1.5,
+                centerX + size / 2,
+                centerY + size / 2
+            )
+        end
+
         -- Parede frontal
         if tile == 1 then
             local size = 300 / distance
